@@ -1,0 +1,60 @@
+1. Simple Scan:
+  
+   nmap <target>
+   
+   This basic command performs a default scan on the specified target, which can be an IP address or a hostname.
+
+2. Port Scan:
+   
+   nmap -p <port(s)> <target>
+   
+   This command scans specific ports on the target. You can specify a single port, a range of ports, or a combination of both.
+
+3. Scan all TCP ports:
+   
+   nmap -p- <target>
+   
+   This command scans all 65535 TCP ports on the target.
+
+4. Service and Version Detection:
+   
+   nmap -sV <target>
+   
+   This command enables service and version detection, which helps identify the type and version of the running services on the target.
+
+5. OS Detection:
+   
+   nmap -O <target>
+   
+   This command attempts to identify the operating system of the target.
+
+6. Aggressive Scan:
+   
+   nmap -A <target>
+   
+   The aggressive scan option combines OS detection, version detection, script scanning, and traceroute all in one.
+
+7. Scan using a specific script:
+   
+   nmap -sC -p <port(s)> <target>
+   
+   This command runs default scripts for the specified ports.
+
+8. Scan multiple targets:
+   
+   nmap <target1> <target2> <target3>
+   
+   You can scan multiple targets simultaneously.
+
+9. Save output to a file:
+   
+   nmap -oN <output.txt> <target>
+   
+   This command saves the scan results to a specified output file in normal format.
+
+10. Scan using a script from the Nmap Scripting Engine (NSE):
+   
+   nmap -sC -p <port(s)> --script=<script-name> <target>
+   
+   This command allows you to run specific scripts from the NSE.
+
